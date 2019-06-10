@@ -25,7 +25,7 @@ function SlTxtChoose() {
             <option>English</option>
           </select>
           <br/><br/>
-          <Link to="sl-txt" className="d-flex justify-content-center"><button type="button" className="btn btn-success">Go</button></Link>
+          <Link to="sl-txt" className="d-flex justify-content-center"><button type="button" className="btn">Go</button></Link>
         </div>
       </div>
     </div>

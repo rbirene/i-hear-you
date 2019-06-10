@@ -22,10 +22,10 @@ function TxtSlChoose() {
           <br/><br/>
           <p><img className="icons" src="img/wave.svg" alt="icon of hand waving"/> To:</p>
           <select>
-            <option>British Sign Language</option>
+            <option>American Sign Language</option>
           </select>
           <br/><br/>
-          <Link to="txt-sl" className="d-flex justify-content-center"><button type="button" className="btn btn-success">Go</button></Link>
+          <Link to="txt-sl" className="d-flex justify-content-center"><button type="button" className="btn">Go</button></Link>
         </div>
       </div>
     </div>
