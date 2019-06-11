@@ -2,7 +2,7 @@
   "name": "i-hear-you",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://rbirene.github.io/i-hear-you/",
+  "homepage": "https://rbirene.github.io/i-hear-you",
   "dependencies": {
     "gh-pages": "^2.0.1",
     "react": "^16.8.6",
