@@ -1,24 +1,17 @@
-/* iPhone 8 frame adapted from: github.com/picturepan2/devices.css */
-.device,
-.device::before,
-.device::after,
-.device *,
-.device *::before,
-.device *::after {
-  box-sizing: border-box;
-}
-
-.device {
+/*PHONE*/
+.phone {
   position: relative;
   transform: scale(1);
   z-index: 1;
+  height: 871px;
+  width: 419px;
 }
 
-.device .device-frame {
+.phone .phone-frame {
   z-index: 1;
 }
 
-.device .device-content {
+.phone-content {
   background-color: #fff;
   background-position: center center;
   background-size: cover;
@@ -26,49 +19,24 @@
   position: relative;
 }
 
-.device-iphone-8 {
-  height: 871px;
-  width: 419px;
-}
-
-.device-iphone-8 .device-frame {
+.phone-frame {
   background: #fff;
-  border-radius: 68px;
-  box-shadow: inset 0 0 0 2px #c8cacb, inset 0 0 0 7px #e2e3e4;
+  border-radius: 60px;
+  box-shadow: inset 0 0 0 7px #eaeaea, 10px 10px 73px -44px rgba(0,0,0,0.75);;
   height: 871px;
   padding: 102px 22px;
   width: 419px;
 }
 
-.device-iphone-8 .device-content {
+.phone-content {
   border: 2px solid #222;
   border-radius: 4px;
   height: 667px;
   width: 375px;
 }
 
-.device-iphone-8 .device-stripe::after,
-.device-iphone-8 .device-stripe::before {
-  border: solid rgba(51, 51, 51, .15);
-  border-width: 0 7px;
-  content: "";
-  height: 6px;
-  left: 0;
-  position: absolute;
-  width: 100%;
-  z-index: 9;
-}
-
-.device-iphone-8 .device-stripe::after {
-  top: 68px;
-}
-
-.device-iphone-8 .device-stripe::before {
-  bottom: 68px;
-}
-
-.device-iphone-8 .device-header {
-  border: 2px solid #c8cacb;
+.phone-home {
+  border: 2px solid #eaeaea;
   border-radius: 50%;
   bottom: 25px;
   height: 58px;
@@ -78,26 +46,25 @@
   width: 58px;
 }
 
-.device-iphone-8 .device-sensors {
-  background: #666;
+.phone-extra {
+  background: #a0a0a0;
   border-radius: 3px;
   height: 6px;
   left: 50%;
-  margin-left: -38px;
+  margin: 0 0 0-38px;
   position: absolute;
-  top: 52px;
-  width: 76px;
+  top: 60px;
+  width: 80px;
 }
 
-.device-iphone-8 .device-sensors::after,
-.device-iphone-8 .device-sensors::before {
-  background: #666;
-  border-radius: 50%;
+.phone-extra::after, .phone-extra::before {
+  background: #a0a0a0;
+  border-radius: 100%;
   content: "";
   position: absolute;
 }
 
-.device-iphone-8 .device-sensors::after {
+.phone-extra::after {
   height: 10px;
   left: 50%;
   margin-left: -5px;
@@ -105,85 +72,20 @@
   width: 10px;
 }
 
-.device-iphone-8 .device-sensors::before {
-  height: 12px;
-  left: -42px;
+.phone-extra::before {
+  height: 10px;
+  left: -40px;
   margin-top: -6px;
   top: 50%;
-  width: 12px;
+  width: 10px;
 }
 
-.device-iphone-8 .device-btns {
-  background: #c8cacb;
-  height: 30px;
-  left: -3px;
-  position: absolute;
-  top: 102px;
-  width: 3px;
+/*CREDIT*/
+.credit{
+  color: #969696;
 }
 
-.device-iphone-8 .device-btns::after,
-.device-iphone-8 .device-btns::before {
-  background: #c8cacb;
-  content: "";
-  height: 56px;
-  left: 0;
-  position: absolute;
-  width: 3px;
-}
-
-.device-iphone-8 .device-btns::after {
-  top: 62px;
-}
-
-.device-iphone-8 .device-btns::before {
-  top: 132px;
-}
-
-.device-iphone-8 .device-power {
-  background: #c8cacb;
-  height: 80px;
-  position: absolute;
-  right: -2px;
-  top: 160px;
-  width: 3px;
-}
-
-.device-iphone-8.device-gold .device-frame {
-  box-shadow: inset 0 0 0 2px #e4b08a, inset 0 0 0 7px #f7e8dd;
-}
-
-.device-iphone-8.device-gold .device-header {
-  border-color: #e4b08a;
-}
-
-.device-iphone-8.device-gold .device-btns,
-.device-iphone-8.device-gold .device-btns::after,
-.device-iphone-8.device-gold .device-btns::before {
-  background: #e4b08a;
-}
-
-.device-iphone-8.device-gold .device-power {
-  background: #e4b08a;
-}
-
-.device-iphone-8.device-spacegray .device-frame {
-  background: #222;
-  box-shadow: inset 0 0 0 2px #74747a, inset 0 0 0 7px #9b9ba0;
-}
-
-.device-iphone-8.device-spacegray .device-stripe::after,
-.device-iphone-8.device-spacegray .device-stripe::before {
-  border-color: rgba(204, 204, 204, .35);
-}
-
-.device-iphone-8.device-spacegray .device-btns,
-.device-iphone-8.device-spacegray .device-btns::after,
-.device-iphone-8.device-spacegray .device-btns::before {
-  background: #74747a;
-}
-
-/* My Style */
+/*GENERAL*/
 *:focus{
   outline: none;
 }

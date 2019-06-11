@@ -25,7 +25,6 @@ function record() {
   const message = document.getElementById("message");
   const recordBtn = document.getElementById("record");
   const speechBubble = document.getElementById("speech-bubble");
-  const videoContainer = document.getElementById("video-container");
   const video = document.getElementById("video");
   //if record button is set to 'start' and show speech bubble
   if (recordBtn.classList.contains("start")){
