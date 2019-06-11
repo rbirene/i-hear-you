@@ -8,14 +8,13 @@ function SlTxt() {
       <div className="header d-flex align-items-center justify-content-center">
         <div className="back"><Link to="sl-txt-choose"><span className="fa fa-chevron-left"></span></Link></div><p className="text-center">I Hear You</p>
       </div>
-      <div className="sl-txt">
-        <video id="video"></video>
-        <div className="speech-bubble">
-          <h3>Good evening!</h3>
+      <div className="sl-txt" id="video-container">
+        <div id="message">To start translating, press the record button below.</div>
+        <video id="video" className="hide"></video>
+        <div id="speech-bubble" className="hide">
+          <h3>Hello!</h3>
         </div>
-        <div id="record" onClick={record} className="start">
-          <img id="record-img" src="img/record.svg" alt="record and stop button"/>
-        </div>
+        <div id="record" onClick={record} className="start"></div>
       </div>
     </div>
   );
@@ -23,20 +22,27 @@ function SlTxt() {
 }
 
 function record() {
+  const message = document.getElementById("message");
   const recordBtn = document.getElementById("record");
-  const recordBtnImg = document.getElementById("record-img");
-  //if record button is set to 'start'
+  const speechBubble = document.getElementById("speech-bubble");
+  const videoContainer = document.getElementById("video-container");
+  const video = document.getElementById("video");
+  //if record button is set to 'start' and show speech bubble
   if (recordBtn.classList.contains("start")){
-    recordBtnImg.src = "img/stop.svg";
+    message.classList.add("hide");
     recordBtn.classList.remove("start");
     recordBtn.classList.add("stop");
+    speechBubble.classList.remove("hide");
     loadVideo();
+    video.classList.remove("hide");
     //else if record button is set to 'stop'
   } else if (recordBtn.classList.contains("stop")) {
-    recordBtnImg.src = "img/record.svg";
     recordBtn.classList.remove("stop");
     recordBtn.classList.add("start");
+    speechBubble.classList.add("hide");
+    video.classList.add("hide");
     stopVideo();
+    message.classList.remove("hide");
   }
 }
 

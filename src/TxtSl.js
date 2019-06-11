@@ -29,10 +29,10 @@ function changeLoader() {
     translation.removeChild(translation.firstChild);
   }
   if (translation.children.length === 0) {
-    var loadingDots = document.createElement("div");
+    const loadingDots = document.createElement("div");
     loadingDots.className = "loading-dots";
     translation.appendChild(loadingDots);
-    var loadingDot = document.createElement("span");
+    const loadingDot = document.createElement("span");
     loadingDot.className = "loading-dot";
     loadingDots.appendChild(loadingDot.cloneNode(true));
     loadingDots.appendChild(loadingDot.cloneNode(true));
@@ -46,7 +46,7 @@ function changeImg() {
     translation.removeChild(translation.firstChild);
   }
   if (translation.children.length === 0) {
-    var img = document.createElement("img");
+    const img = document.createElement("img");
     img.src = "img/hand.svg";
     img.alt = "american sign language of 'okay'";
     translation.appendChild(img);

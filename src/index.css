@@ -230,6 +230,9 @@ div.back a{
   color: #fff;
   text-decoration: none;
 }
+.hide{
+  display: none;
+}
 
 /*BACKROUNDS*/
 .home{
@@ -238,6 +241,12 @@ div.back a{
 }
 
 .sl-txt-choose, .txt-sl-choose, .txt-sl{
+  background: linear-gradient(10deg, #F5F5F5 50%,  #79cdef 50%, #26ADE4);
+  padding: 30px 20px;
+  height: 603px;
+}
+
+.sl-txt{
   background: linear-gradient(10deg, #F5F5F5 50%,  #79cdef 50%, #26ADE4);
   padding: 30px 20px;
   height: 603px;
@@ -314,24 +323,29 @@ select{
 
 /*SL TO TXT*/
 #video{
-  height: 603px;
-  width: 372px;
+  height: 540px;
+  width: 330px;
+  border-radius: 20px;
+  box-shadow: 10px 10px 73px -44px rgba(0,0,0,0.75);
   object-fit: fill;
-  -webkit-transform: scaleX(-1);
   transform: scaleX(-1);
 }
 
-.speech-bubble {
+#speech-bubble{
   position: absolute;
   bottom: 100px;
-  left: 40px;
+  left: 50px;
   background: #fff;
   border-radius: 20px;
   box-shadow: 10px 10px 73px -44px #000;
+  opacity: 0;
   padding: 15px 40px;
+  animation: fade-in-up 1s ease-in 3s;
+  animation-delay: 1s;
+  animation-fill-mode: forwards;
 }
 
-.speech-bubble:after {
+#speech-bubble:after{
   content: '';
   position: absolute;
   left: 0;
@@ -344,16 +358,74 @@ select{
   border-bottom: 0;
   margin-left: -21px;
 }
+
+@keyframes fade-in-up {
+  from {
+    transform: translate3d(0,70px,0);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0,0,0);
+    opacity: 1;
+  }
+}
+
 #record{
-  bottom: 10px;
-  display: block;
-  left: 38%;
   position: absolute;
-}
-#record img{
+  bottom: 10px;
+  left: 151px;
+  border-radius: 100%;
   cursor: pointer;
-  width: 80px;
+  height: 70px;
+  width: 70px;
 }
+
+#record.start{
+  background: #28a745;
+  border-color: #28a745;
+  box-shadow: 0 0 0 rgba(40, 167, 70, 0.4);
+  animation: pulse-start 1s infinite;
+}
+
+@keyframes pulse-start {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+#record.stop{
+  background: #dc3545;
+  border-color: #dc3545;
+  box-shadow: 0 0 0 rgba(220, 53, 69, 0.4);
+  animation: pulse-stop 2s infinite;
+}
+
+@keyframes pulse-stop {
+  0% {
+    box-shadow: 0 0 0 0 rgba(220, 53, 69, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(220, 53, 69, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(220, 53, 69, 0);
+  }
+}
+
+#message{
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 10px 10px 73px -44px rgba(0,0,0,0.75);
+  padding: 40px;
+  margin: 190px 0;
+}
+
 /*TXT TO SL*/
 .textbox{
   position: relative;
@@ -403,17 +475,14 @@ textarea{
 @keyframes dot-animation {
   0% {
     opacity: .4;
-    -webkit-transform: scale(1, 1);
     transform: scale(1, 1);
   }
   50% {
     opacity: 1;
-    -webkit-transform: scale(1.2, 1.2);
     transform: scale(1.2, 1.2);
   }
   100% {
     opacity: .4;
-    -webkit-transform: scale(1, 1);
     transform: scale(1, 1);
   }
 }
